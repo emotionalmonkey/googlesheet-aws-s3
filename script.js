@@ -40,7 +40,7 @@ const activeRows = (sheet) => {
 };
 
 // Function to publish JSON data to AWS S3
-const publishJson = (sheet) => {
+var publishJson = (sheet) => {
   const rows = activeRows(sheet);
 
   // If there's no data (only header), return undefined
@@ -65,7 +65,7 @@ const publishJson = (sheet) => {
 };
 
 // Function to publish CSV data to AWS S3
-const publishCSV = (sheet) => {
+var publishCSV = (sheet) => {
   const csv = convertToCSV(sheet);
 
   // If there's no data (only header), return undefined
